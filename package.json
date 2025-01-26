@@ -1,0 +1,19 @@
+{
+  "name": "telegram-sniper-bot",
+  "version": "1.0.0",
+  "main": "src/app.ts",
+  "scripts": {
+    "start": "npx ts-node src/app.ts"
+  },
+  "dependencies": {
+    "@solana/web3.js": "^1.98.0",
+    "@supabase/supabase-js": "^2.48.1",
+    "dotenv": "^16.4.7",
+    "grammy": "^1.34.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.19.74",
+    "ts-node": "^10.9.2",
+    "typescript": "^4.9.5"
+  }
+}
