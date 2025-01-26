@@ -12,13 +12,7 @@ if (!BOT_TOKEN) {
 console.log("Initializing bot...");
 const bot = new Bot(BOT_TOKEN);
 
-// Middleware para registrar actualizaciones y logs
-bot.use((ctx, next) => {
-  console.log("Update received:", ctx.update);
-  return next();
-});
-
-// Configurar comandos
+// Configurar comandos y manejadores
 setupCommands(bot);
 
 // Iniciar el bot
@@ -34,17 +28,6 @@ setupCommands(bot);
   }
 })();
 
-// Manejo de señales para detener el bot
-process.once("SIGINT", () => {
-  console.log("👋 Stopping bot...");
-  bot.stop();
-});
-process.once("SIGTERM", () => {
-  console.log("👋 Stopping bot...");
-  bot.stop();
-});
-
-// Manejador global de errores
-bot.catch((err) => {
-  console.error("❌ An error occurred while processing an update:", err);
-});
+// Manejo de señales
+process.once("SIGINT", () => bot.stop());
+process.once("SIGTERM", () => bot.stop());

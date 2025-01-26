@@ -1,10 +1,10 @@
-export const mainMenu = [
-  [{ text: "💰 Check Balance", callback_data: "balance" }],
-  [{ text: "🛒 Buy Crypto", callback_data: "buy" }],
-  [{ text: "📉 Sell Crypto", callback_data: "sell" }],
-];
-
-export const buyKeyboard = [
-  [{ text: "Bitcoin (BTC)", callback_data: "buy_btc" }],
-  [{ text: "Ethereum (ETH)", callback_data: "buy_eth" }],
+export const walletKeyboard = [
+  [
+    { text: "Register Wallet", callback_data: "register_wallet" },
+    { text: "View Wallet", callback_data: "view_wallet" },
+  ],
+  [
+    { text: "Check Balance", callback_data: "check_balance" },
+    { text: "Buy Crypto", callback_data: "buy_crypto" },
+  ],
 ];
